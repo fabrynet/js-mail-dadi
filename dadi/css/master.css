@@ -26,6 +26,9 @@ body {
   padding: 20px;
   box-shadow: 2px 2px 8px rgba(0,0,0, 0.7);
 }
+.modal img {
+  max-width: 150px;
+}
 .btn {
   width: 100%;
   padding: 10px 20px;

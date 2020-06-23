@@ -3,27 +3,68 @@
 
 var btn = document.getElementById('lanciaDado');
 
-btn.addEventListener('click', function() {
-  var min = 1;
-  var max = 6;
-  var dadoUtente = Math.floor(Math.random() * (max - min + 1)) + min;
-  var dadoPC = Math.floor(Math.random() * (max - min + 1)) + min;
 
-  console.log(dadoUtente);
-  console.log(dadoPC);
+btn.addEventListener('click', function() {
+
+  var dado1 = document.getElementById('imgDado1');
+  var dado2 = document.getElementById('imgDado2');
+  var dado = [1,2,3,4,5,6];
+  var min = 0;
+  var max = 5;
+  var lancioUtente = Math.floor(Math.random() * (max - min + 1)) + min;
+  var lancioPC = Math.floor(Math.random() * (max - min + 1)) + min;
+  var resultLancioUtente = dado[lancioUtente];
+  var resultLancioPC = dado[lancioPC];
+
+  if (resultLancioUtente == 1) {
+    dado1.setAttribute('src','img/one.png');
+  } else if (resultLancioUtente == 2) {
+    dado1.setAttribute('src','img/two.png');
+  } else if (resultLancioUtente == 3) {
+    dado1.setAttribute('src','img/three.png');
+  } else if (resultLancioUtente == 4) {
+    dado1.setAttribute('src','img/four.png');
+  } else if (resultLancioUtente == 5) {
+    dado1.setAttribute('src','img/five.png');
+  } else if (resultLancioUtente == 6) {
+    dado1.setAttribute('src','img/six.png');
+  }
+
+  if (resultLancioPC == 1) {
+    dado2.setAttribute('src','img/one.png');
+  } else if (resultLancioPC == 2) {
+    dado2.setAttribute('src','img/two.png');
+  } else if (resultLancioPC == 3) {
+    dado2.setAttribute('src','img/three.png');
+  } else if (resultLancioPC == 4) {
+    dado2.setAttribute('src','img/four.png');
+  } else if (resultLancioPC == 5) {
+    dado2.setAttribute('src','img/five.png');
+  } else if (resultLancioPC == 6) {
+    dado2.setAttribute('src','img/six.png');
+  }
+
+
+  console.log(resultLancioUtente);
+  console.log(resultLancioPC);
 
   var result = document.getElementById('result');
   var resultUtente = document.getElementById('resultUtente');
   var resultPC = document.getElementById('resultPC');
 
-  if (dadoUtente > dadoPC) {
+  if (resultLancioUtente > resultLancioPC) {
     result.innerHTML = "Hai vinto!";
-  } else if (dadoUtente < dadoPC) {
+    result.className = 'show';
+  } else if (resultLancioUtente < resultLancioPC) {
     result.innerHTML = "Mi dispiace, hai perso.";
+    result.className = 'show';
   } else {
     result.innerHTML = "Pareggio.";
+    result.className = 'show';
   }
 
-  resultUtente.innerHTML = "E' uscito: " + dadoUtente;
-  resultPC.innerHTML = "Al PC è uscito: " + dadoPC;
+  resultUtente.innerHTML = "E' uscito: " + resultLancioUtente;
+  resultUtente.className = 'show';
+  resultPC.innerHTML = "Al PC è uscito: " + resultLancioPC;
+  resultPC.className = 'show';
 });
