@@ -6,8 +6,8 @@ var btn = document.getElementById('lanciaDado');
 
 btn.addEventListener('click', function() {
 
-  var dado1 = document.getElementById('imgDado1');
-  var dado2 = document.getElementById('imgDado2');
+  // var dado1 = document.getElementById('imgDado1');
+  // var dado2 = document.getElementById('imgDado2');
   var dadoUtente = document.getElementById('dadoUtente');
   var dadoCPU = document.getElementById('dadoCPU');
   var dado = [1,2,3,4,5,6];
