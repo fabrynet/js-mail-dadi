@@ -29,6 +29,10 @@ body {
 .modal img {
   max-width: 150px;
 }
+.modal i {
+  font-size: 5em;
+  color: green;
+}
 .btn {
   width: 100%;
   padding: 10px 20px;
